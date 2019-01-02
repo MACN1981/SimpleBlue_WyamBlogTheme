@@ -1,4 +1,4 @@
-# SimpleBlue_WyamBlogTheme
+# SimpleBlue: A custom Wyam Blog Theme
 
 A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit too modern for my taste, so I created a new one with aesthetics similar to traditional wordpress blogs. [You can see a demo here](https://macn1981.github.io/SimpleBlue_WyamBlogTheme/). 
 
@@ -29,4 +29,4 @@ That said, if you think you can manage to get a usable Wyam theme out of this me
 
 ## Why are issues deactivated?
 
-Because the time I can dedicate to side projects is limited, and changes to this repository will be few and limited in scope. 
+Because the time I can dedicate to side projects is limited, and changes to this repository will be few and limited in scope.
