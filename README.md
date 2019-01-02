@@ -1,6 +1,6 @@
 # SimpleBlue_WyamBlogTheme
 
-A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit too modern for my taste, so I created a new one with aesthetics similar to traditional wordpress blogs. The theme feateures are:
+A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit too modern for my taste, so I created a new one with aesthetics similar to traditional wordpress blogs. [You can see a demo here](https://macn1981.github.io/SimpleBlue_WyamBlogTheme/). The theme feateures are:
 
  - **CSS only responsive design:** The blog adapts to different screens only with CSS.
  - **Minimal javascript:** Only a single file with quality of life enhancements that can be turned off without diminishing the blog usability. 
