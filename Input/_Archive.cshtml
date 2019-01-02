@@ -1,0 +1,32 @@
+---
+Title: Archive
+---
+<div class="content archive">
+  <h2>Archive</h2>
+  @foreach(IGrouping<int, IDocument> yeargroup in Documents[Blog.BlogPosts]
+        .Where(x => x.ContainsKey(BlogKeys.Published))
+        .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+        .GroupBy(x => x.Get<DateTime>(BlogKeys.Published).Year)
+        .OrderByDescending(x => x.Key))
+  {
+    DateTime firstdate = yeargroup.FirstOrDefault().Get<DateTime>(BlogKeys.Published);
+    string YearName = firstdate.ToString("yyyy");
+    string YearLink = firstdate.ToString("Yyyyy");
+    <h3>@YearName</h3> 
+    @foreach(IGrouping<int, IDocument> monthgroup in yeargroup
+        .Where(x => x.ContainsKey(BlogKeys.Published))
+        .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+        .GroupBy(x => x.Get<DateTime>(BlogKeys.Published).Month)
+        .OrderByDescending(x => x.Key))
+    {
+      DateTime seconddate = monthgroup.FirstOrDefault().Get<DateTime>(BlogKeys.Published);
+      string MonthName = seconddate.ToString("MMMM");
+      string MonthLink = seconddate.ToString("YyyyyMMMM");
+      <h4>@MonthName</h4> 
+      @foreach (IDocument post in monthgroup)
+      {
+        <a href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a>
+      }
+    }
+  }
+</div>

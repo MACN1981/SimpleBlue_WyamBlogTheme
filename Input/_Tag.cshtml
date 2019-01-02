@@ -1,0 +1,47 @@
+---
+Title: Tags
+---
+@{ 
+    var postPages = Model.DocumentList(Keys.PageDocuments).OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published)); 
+    string tag = Model.String(BlogKeys.Tag).ToLowerInvariant().Replace(' ', '-'); 
+    tag = tag.StartsWith(".") ? tag.Substring(1) : tag; 
+    string taglink =  Context.GetLink("tags/index.html");
+    var tagdescription =  Documents["TagDescriptions"]
+      .Where(x => x.ContainsKey("Title") && x.String("Title") == Model.String(BlogKeys.Tag))
+    . FirstOrDefault();
+    int postcount  = 0;
+    int posttotal  = postPages.Count() -1;
+}
+
+<a href="@taglink" class="navprevious" aria-label="Return to Tag index"> < Return to Tag index</a>
+<h2>@tag</h2>
+@if(tagdescription != null)
+{
+  <p>
+    @Html.Raw(@tagdescription)
+  </p>
+  <p class="taglinksheader">
+    ARTICLES WITH THIS TAG
+  </p>
+}
+<ul class="taglinks">
+  @foreach(var post in postPages){
+    string lead = post.String(BlogKeys.Lead);
+    <li>
+      <h4><a href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a></h4>
+      @if(!string.IsNullOrWhiteSpace(lead))
+      {
+        <h5>@lead</h5>
+      }
+      @if(!string.IsNullOrWhiteSpace(post.String(BlogKeys.Excerpt)))
+      {
+        <p>@Html.Raw(post.String(BlogKeys.Excerpt))</p>
+      }
+      @if(postcount <= posttotal)
+      {
+        postcount = postcount + 1;
+        <hr>
+      }
+    </li>
+  }
+</ul>

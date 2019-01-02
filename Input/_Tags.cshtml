@@ -1,0 +1,45 @@
+---
+Title: Tags
+---
+
+<h2>Tag Index</h1>
+<ul class="taglist">
+  @foreach (IDocument tagDocument in Documents[Blog.Tags]
+    .GroupBy(x => x.String(BlogKeys.Tag))
+    .Select(x => x.FirstOrDefault())
+    .OrderByDescending(x => x.Get<int>(Keys.TotalItems))
+    .ThenBy(x => x.String(BlogKeys.Tag)))
+  {
+      string tag = tagDocument.String(BlogKeys.Tag);
+      string postCount = tagDocument.String(Keys.TotalItems);
+      var tagdescription =  Documents["TagDescriptions"]
+          .Where(x => x.ContainsKey("Title") && x.String("Title") == @tag)
+          .FirstOrDefault();
+      <li>
+        <a aria-role="button" href="@Context.GetLink(tagDocument)"> 
+          <div>
+            <div class="tagtitle">
+              <span class="tagname">@tag</span>
+              @if(postCount == "1")
+              {
+                <span class="articlecount">@postCount Post </span>
+              }
+              else
+              {
+                <span class="articlecount">@postCount Posts</span>
+              }
+            </div>
+            @if(tagdescription != null)
+            {
+                <div class="tagdescription">
+                  @Html.Raw(@tagdescription)
+                </div>
+            }
+          </div>
+        </a>
+      </li>
+  }
+</ul>
+
+
+

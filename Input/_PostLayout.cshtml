@@ -1,0 +1,85 @@
+@{
+    Layout = "_Layout";
+    var Lead = Model.WithoutSettings.String(BlogKeys.Lead);
+    var Published = Model.Get<DateTime>(BlogKeys.Published);
+    var Title = Model.WithoutSettings.String(BlogKeys.Title);
+    var Tags = Model.Get<string[]>(BlogKeys.Tags);
+    var previouspost =  Documents[Blog.BlogPosts]
+          .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) < Published)
+          .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+          .FirstOrDefault();
+    var nextpost =  Documents[Blog.BlogPosts]
+          .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) > Published)
+          .OrderBy(x => x.Get<DateTime>(BlogKeys.Published))
+          .FirstOrDefault();
+    string labelserie = Model.WithoutSettings.String("Serie");
+    IEnumerable<IDocument> postseries =  Documents[Blog.BlogPosts]
+      .Where(x => x.ContainsKey("Serie") && x.String("Serie") == labelserie)
+      .OrderBy(x => x.Get<DateTime>(BlogKeys.Published));
+}
+
+<article class="content">
+  @if (Published != default(DateTime))
+  {
+    <time class="published" aria-label="Published">@Published.ToLongDateString()</time>
+  }
+  @if (Tags != null)
+  {
+    <ul class="tagcontainer">
+    @foreach (string tag in Tags.OrderBy(x => x))
+    {
+        IDocument tagDocument = Documents[Blog.Tags].FirstOrDefault(x => x.String(BlogKeys.Tag) == tag && x.Get<int>(Keys.CurrentPage) == 1);
+        if(tagDocument != null)
+        {
+          <li>
+            <a aria-role="button" href="@Context.GetLink(tagDocument)"> @tag </a>
+          </li>
+        };
+    }
+    </ul>
+  }
+  <h1>@Title</h1>
+  @if (!string.IsNullOrWhiteSpace(labelserie)) 
+  {
+    int counter = 1;
+    <div class="serieindex">
+      <h5>@labelserie</h5>
+      <ol>
+        @foreach (IDocument post in postseries)
+        {
+          <li>
+          @if(post.WithoutSettings.String(BlogKeys.Title) == Title)
+          {
+            <span>@counter</span><b>@Title</b>
+          }
+          else
+          {
+            <span>@counter</span><a aria-role="button" href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title) </a>
+          }
+          </li>
+          counter += 1;
+        }
+      </ol>
+    </div>
+  }
+  @RenderBody()
+</article>
+<nav class="navlinks">
+  @if(previouspost != null)
+  {
+    <a href="@Context.GetLink(previouspost)" class="navprevious" aria-label="Previous post">
+      <span class="fullnavlink">@previouspost.WithoutSettings.String(BlogKeys.Title)</span>
+      <span class="shortnavlink">Previous</span>
+    </a>
+  }
+  @if(nextpost != null)
+  {
+    <a href="@Context.GetLink(nextpost)" class="navnext" aria-label="Next post">
+      <span class="fullnavlink">@nextpost.WithoutSettings.String(BlogKeys.Title)</span>
+      <span class="shortnavlink">Next</span>
+    </a>
+  }
+</nav>
+@Html.Partial("_Sidebar")
+
+

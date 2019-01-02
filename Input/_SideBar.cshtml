@@ -1,0 +1,121 @@
+@{
+  string Title = Model.WithoutSettings.String(BlogKeys.Title);
+  IDocument currentpost = null;
+  bool ishome = (Title == "Home" || Title == "");
+  if (ishome){
+    currentpost =  Documents[Blog.BlogPosts]
+      .Where(x => x.ContainsKey(BlogKeys.Published))
+      .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+      .FirstOrDefault();
+    Title = currentpost.WithoutSettings.String(BlogKeys.Title);
+  }
+  else
+  {
+    currentpost =  Documents[Blog.BlogPosts]
+      .Where(x => x.String(BlogKeys.Title) == Title)
+      .FirstOrDefault();
+  }
+
+  string yearlabel = "";
+  string monthlabel = "";
+  if (currentpost!= null){
+        DateTime currentdate = currentpost.Get<DateTime>(BlogKeys.Published);
+        yearlabel = currentdate.ToString("Yyyyy");
+        monthlabel = currentdate.ToString("YyyyyMMMM");
+  }
+}
+<nav class="sidebar" aria-label="feeds, tags and index">
+  <!--Feeds-->
+  <h1>Feeds</h1>
+  <ul class="feedscontainer">
+    @if (Context.String(BlogKeys.RssPath) != null) {
+      <li>
+        <a href="@Context.GetLink(Context.String(BlogKeys.RssPath))">RSS</a>
+      </li>
+    }
+    @if (Context.String(BlogKeys.AtomPath) != null) { 
+      <li>
+        <a href="@Context.GetLink(Context.String(BlogKeys.AtomPath))">Atom</a>
+      </li>
+    }
+  </ul>
+  <!--tags-->
+  <h1>Tags</h1>
+  <ul class="tagcontainer">
+    @foreach (IDocument tagDocument in Documents[Blog.Tags]
+      .GroupBy(x => x.String(BlogKeys.Tag)).Select(x => x.Where(p => p.Get<int>(Keys.CurrentPage) == 1).First())
+      .OrderByDescending(x => x.Get<int>(Keys.TotalItems)))
+    {
+        string tag = tagDocument.String(BlogKeys.Tag);
+        string postCount = tagDocument.String(Keys.TotalItems);
+        <li>
+          <a aria-role="button" href="@Context.GetLink(tagDocument)"> @tag (@postCount)</a>
+        </li>
+    }
+  </ul>
+  <!--Archive-->
+  <h1>Archive</h1>
+  <ol class="archivetree">
+      @foreach(IGrouping<int, IDocument> yeargroup in Documents[Blog.BlogPosts]
+            .Where(x => x.ContainsKey(BlogKeys.Published))
+            .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+            .GroupBy(x => x.Get<DateTime>(BlogKeys.Published).Year)
+            .OrderByDescending(x => x.Key))
+      {
+        DateTime firstdate = yeargroup.FirstOrDefault().Get<DateTime>(BlogKeys.Published);
+        string YearName = firstdate.ToString("yyyy");
+        string YearLink = firstdate.ToString("Yyyyy");
+        int yearcount = yeargroup.Count();
+        <li>
+          @if(YearLink == yearlabel){
+            <input type="checkbox" checked id="@YearLink" />
+          }
+          else
+          {
+            <input type="checkbox" id="@YearLink" />
+          }
+          <label for="@YearLink">@YearName (@yearcount)</label> 
+          <ol>
+            @foreach(IGrouping<int, IDocument> monthgroup in yeargroup
+                .Where(x => x.ContainsKey(BlogKeys.Published))
+                .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+                .GroupBy(x => x.Get<DateTime>(BlogKeys.Published).Month)
+                .OrderByDescending(x => x.Key))
+            {
+              DateTime seconddate = monthgroup.FirstOrDefault().Get<DateTime>(BlogKeys.Published);
+              string MonthName = seconddate.ToString("MMMM");
+              string MonthLink = seconddate.ToString("YyyyyMMMM");
+              int monthcount = monthgroup.Count();
+              <li>
+                @if(MonthLink == monthlabel){
+                  <input type="checkbox" checked id="@MonthLink" />
+                }
+                else
+                {
+                  <input type="checkbox" id="@MonthLink" />
+                }
+                <input type="checkbox" id="@MonthLink" />
+                <label for="@MonthLink">@MonthName (@monthcount)</label> 
+                <ol>
+                  @foreach (IDocument post in monthgroup)
+                  {
+                    <li class="archivelink">
+                    
+                    @if(post.WithoutSettings.String(BlogKeys.Title) == Title ){
+                      <strong>@post.WithoutSettings.String(BlogKeys.Title)</strong>
+                    }
+                    else
+                    {
+                      <a href="@Context.GetLink(post)">@post.WithoutSettings.String(BlogKeys.Title)</a>
+                    }
+
+                    </li>
+                  }
+                </ol>
+              </li>
+            }
+          </ol>
+        </li>
+      }
+  </ol>
+</nav>
