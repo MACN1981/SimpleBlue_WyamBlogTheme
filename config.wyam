@@ -1,0 +1,35 @@
+//namespaces
+using System.Globalization;
+using System.Collections;
+
+using Markdig.Extensions.Figures;
+using Markdig.Extensions.Tables;
+using Markdig.Renderers;
+using Markdig.Renderers.Html;
+using Markdig.Syntax;
+using Markdig.Syntax.Inlines;
+
+//Directives 
+#recipe Blog
+#t BlogTemplate
+
+// Customize your settings and add new ones here
+Settings[Keys.Host] = "host.com";
+Settings[BlogKeys.Title] = "Custom Blog";
+Settings[BlogKeys.Description] = "Welcome!";
+Settings[BlogKeys.MarkdownConfiguration] ="advanced+figures+customcontainers";
+
+//Set blog culture
+System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("EN");
+
+// Add any pipeline customizations here
+Pipelines.InsertAfter("Pages","TagDescriptions",
+    ReadFiles("tagdescriptions/*.md"),
+    FrontMatter(Yaml()),
+    Markdown(),
+    Meta("TagDescriptions", @doc.Content)
+);
+
+
+
+
