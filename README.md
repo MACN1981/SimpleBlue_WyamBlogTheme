@@ -23,7 +23,7 @@ A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit 
   
 ## Why it is not available as a nuget package, like other themes?
 
-Because, as noted before, this theme was done according to my preferences, which may not be the same as the rest of the people, and is not specially customizable. Also, the **Tag descriptions:** feature relies in a custom config.wyam file, which cannot be included in the nuget package. In my opinion, it is not a good candidate to Nuget package in its current form. 
+Because, as noted before, this theme was done according to my preferences, which may not be the same as the rest of the people, and is not specially customizable. Also, the **Tag descriptions** feature relies in a custom config.wyam file, which cannot be included in the nuget package. In my opinion, it is not a good candidate to Nuget package in its current form. 
 
 That said, if you think you can manage to get a usable Wyam theme out of this mess, by all means, fork the project and do it. 
 
