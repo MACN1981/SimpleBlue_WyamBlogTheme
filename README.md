@@ -4,7 +4,7 @@ A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit 
 
 ## The good bits:
 
- - **CSS only responsive design:** The blog adapts to different screens, using only with CSS.
+ - **CSS only responsive design:** The blog adapts to different screens, using only CSS.
  - **Minimal javascript:** Only a single file with quality of life enhancements that can be turned off without diminishing the blog usability. 
  - **Dark Mode:** The blog has a toogleable mode for those who prefer web pages with a a dark color scheme. The setting is stored in local storage. The colors scheme can be further customized by changing the css variables at the start of the styles.css file.
  - **Post series:** You can links groups of posts by adding a "Serie" metadata to the post. Posts with the same value in that metadata will have a list of all post in the same series at the starts, with links. Look in the posts folder for examples
