@@ -10,7 +10,8 @@ Title: Tags
     .OrderByDescending(x => x.Get<int>(Keys.TotalItems))
     .ThenBy(x => x.String(BlogKeys.Tag)))
   {
-      string tag = tagDocument.String(BlogKeys.Tag);
+      string tag = tagDocument.String(BlogKeys.Tag).ToLowerInvariant().Replace('-', ' '); 
+      tag = tag.StartsWith(".") ? tag.Substring(1) : tag; 
       string postCount = tagDocument.String(Keys.TotalItems);
       <li>
         <a aria-role="button" href="@Context.GetLink(tagDocument)"> 

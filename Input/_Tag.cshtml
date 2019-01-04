@@ -3,7 +3,7 @@ Title: Tags
 ---
 @{ 
     var postPages = Model.DocumentList(Keys.PageDocuments).OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published)); 
-    string tag = Model.String(BlogKeys.Tag).ToLowerInvariant().Replace(' ', '-'); 
+    string tag = Model.String(BlogKeys.Tag).ToLowerInvariant().Replace('-', ' '); 
     tag = tag.StartsWith(".") ? tag.Substring(1) : tag; 
     string taglink =  Context.GetLink("tags/index.html");
     int postcount  = 0;
@@ -28,7 +28,7 @@ Title: Tags
       @if(postcount <= posttotal)
       {
         postcount = postcount + 1;
-        <hr>
+        <br>
       }
     </li>
   }

@@ -850,44 +850,33 @@ ul.taglist .tagtitle{
   background: var(--secondarycolor);
   border: 1px solid var(--secondarycolor);
   color: var(--white);
-  border-radius: 3px 3px 0px 0px;
-  display: block;
-  padding: 2px;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 100px;
   width: 100%;
   height: 33px;
-  font-size: 1.1em;
-
+  vertical-align: middle;
 }
 
 ul.taglist .tagname{
   display: block;
-  float: left;
   font-size: 1.3em;
   font-weight: 600;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
   margin: 1px;
+  margin-left: 5px;
+  grid-column:1;
 }
 
 ul.taglist .articlecount{
   display: block;
-  float: right;
   color: var(--secondarycolor);
   background: var(--white);
   border-radius: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-ul.taglist .tagdescription > *{
-  display: block;
-}
-
-ul.taglist .tagdescription > *{
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 3px;
+  padding-top: 2px;
+  grid-column:2;
+  text-align: center;
+  font-weight: 600;
 }
 
 ul.taglinks {
