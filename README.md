@@ -24,8 +24,4 @@ A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit 
 
 Because, as noted before, this theme was done according to my preferences, which may not be the same as the rest of the people, and is not specially customizable. Also, the **Tag descriptions** feature relies in a custom config.wyam file, which cannot be included in the Nuget package. In my opinion, it is not a good candidate to Nuget package in its current form. 
 
-That said, if you think it should be available in Nuget, by all means, fork the project and do it. 
-
-## Why are issues deactivated?
-
-Because the time I have for side projects is limited. I will make changes and fix things from time to time, and I will review any pull request as soon as possible, but that's the extent of the work I will able to put on this repository.
+That said, if you think it should be available in Nuget, by all means, fork the project and do it.
