@@ -12,9 +12,6 @@ Title: Tags
   {
       string tag = tagDocument.String(BlogKeys.Tag);
       string postCount = tagDocument.String(Keys.TotalItems);
-      var tagdescription =  Documents["TagDescriptions"]
-          .Where(x => x.ContainsKey("Title") && x.String("Title") == @tag)
-          .FirstOrDefault();
       <li>
         <a aria-role="button" href="@Context.GetLink(tagDocument)"> 
           <div>
@@ -29,12 +26,6 @@ Title: Tags
                 <span class="articlecount">@postCount Posts</span>
               }
             </div>
-            @if(tagdescription != null)
-            {
-                <div class="tagdescription">
-                  @Html.Raw(@tagdescription)
-                </div>
-            }
           </div>
         </a>
       </li>
