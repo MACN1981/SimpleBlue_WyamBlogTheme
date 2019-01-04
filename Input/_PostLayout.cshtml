@@ -23,6 +23,7 @@
   {
     <time class="published" aria-label="Published">@Published.ToLongDateString()</time>
   }
+  <h1>@Title</h1>
   @if (Tags != null)
   {
     <ul class="tagcontainer">
@@ -38,7 +39,6 @@
     }
     </ul>
   }
-  <h1>@Title</h1>
   @if (!string.IsNullOrWhiteSpace(labelserie)) 
   {
     int counter = 1;

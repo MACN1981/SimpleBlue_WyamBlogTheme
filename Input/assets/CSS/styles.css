@@ -650,7 +650,6 @@ content
   font-family: Georgia, serif;
   font-size: 1em;
   display: block;
-  /*color: var(--secondaryfontcolor);*/
 }
 
 .content figure {
@@ -673,13 +672,27 @@ content
 }
 
 .content ul.tagcontainer{
-  float:right;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 15px;
 }
 
+.content h1:first-of-type {
+  margin-bottom: 5px;
+}
+
+.content ul.tagcontainer li:first-of-type {
+  margin: 0px;
+}
+
+.content ul.tagcontainer li {
+  display: block;
+}
 .content time.published{
   display:block;
-  float:left;
+  float:right;
   margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 1.2em;
   padding: 2px 5px;
   background-color: var(--secondarycolor);
@@ -763,7 +776,6 @@ nav.sidebar h1 {
 ul.tagcontainer{
   display: flex;
   flex-wrap: wrap;
-  padding: 3px;
   width: auto;
 }
 
