@@ -51,7 +51,6 @@ var modeChange = function() {
 
 }
 
-
 //hide back to top button until user scroll down
 var setbacktotop = function() {
 
@@ -102,47 +101,11 @@ var hideNoScript = function() {
   }
 }
 
-//archive links tree behave like an accordion 
-var setAccordion = function() {
-  const trees = window.top.document.querySelectorAll( "ol.archivetree");
-  for (let index = 0; index < trees.length; index++) {
-    const tree = trees[index];
-    tree.addEventListener('change', function(event) {
-      let callername = event.target.id;
-      let calleryear = callername.slice(0,5);
-      console.log(calleryear)
-      let checkboxes = tree.querySelectorAll( 'input[type="checkbox"]');
-      for (let index = 0; index < checkboxes.length; index++) {
-        const element = checkboxes[index];
-        let elementname = element.id;
-        let elementyear = elementname.slice(0,5);
-        let isyear = ((elementname.length) === 5);
-        if (isyear){
-          if (elementyear !== calleryear){
-            element.checked = false;
-          }
-        }else{
-          if (elementyear !== calleryear){
-            element.checked = false;
-          }else{
-            if (elementname !== callername){
-              element.checked = false;
-            }
-          }
-        }
-      }
-    });
-    
-  }
-
-};
-
 //set all in motion
 ready(function(){
   hideNoScript();
   modeChange();
   setbacktotop();
-  setAccordion();
 });
 
 
