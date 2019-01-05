@@ -619,9 +619,14 @@ content
   border-bottom: 1px solid var(--tertiarycolor);
 }
 
+
 .content table thead tr th{
   padding-left: 3px;
   padding-right: 3px;
+  border-left: 1px solid var(--tertiarycolor);
+}
+.content table thead tr th:first-of-type{
+  border-left: 0px;
 }
 
 .content table tbody tr {
@@ -633,6 +638,10 @@ content
 .content table tbody tr td{
   padding-left: 3px;
   padding-right: 3px;
+  border-left: 1px solid var(--tertiarycolor);
+}
+.content table tbody tr td:first-of-type{
+  border-left: 0px;
 }
 
 .content table tbody tr:nth-of-type(odd) {
@@ -744,6 +753,23 @@ content
 .content pre code{
   padding: 0px;
 }
+
+.content sup {
+  top: -.5em;
+}
+
+.content sub, sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+.content mark {
+  padding: .2em;
+  background-color: rgb(233,233, 0);
+}
+
 /*
 =======================================================================
 Side bar
@@ -1071,6 +1097,7 @@ media queries
     height: 75px;
     border-radius: 5px;
     margin-top: inherit;
+    margin-bottom: 3px;
   }
 
   footer hr {
