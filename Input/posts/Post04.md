@@ -20,3 +20,13 @@ A list of formats:
  - ^superscript^ example
  - ++inserted++ example
  - ==marked== example
+
+Alerts
+
+:::{.alert .alert-info}
+A info alert.
+:::
+
+:::{.alert .alert-warning}
+A warning alert.
+:::
