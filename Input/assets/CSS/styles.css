@@ -23,8 +23,10 @@ body {
   --success:#dff0d8;
   --info:#a4dcf8;
   --danger:#f79390;
-  --quote:#fcce89;
+  --quote:#b9a268;
+  --quotenested:rgba(185, 162, 104,0.5);
   --cite:#fddfb3;
+  --codeback: #f0f0f0;
 }
 
 /* dark mode*/
@@ -39,6 +41,7 @@ body.dark {
   --inactivetab:#555555;
   --transparentfontcolor:rgba(15, 15, 15,0.75);
   --cite:#d68204;
+  --codeback: #646464;
 }
 
 /*
@@ -86,7 +89,7 @@ a:hover{
 }
 
 .content{
-  padding: 10px;
+  padding: 1em;
 }
 
 .logo {
@@ -601,12 +604,59 @@ content
 } 
 
 .content ul li::before {
-  content: "· ";
   font-weight: 900;
+  color: var(--linkcolor);
+  padding-right: 0.2em;
 } 
+
+.content ul li:before{
+  content:"\0025CF";
+}
+
+.content ul li ul li:before{
+  content:"\0025A0";
+}
+
+.content ul li ul li ul li:before{
+  content:"\0025C6";
+  font-size: 0.8em;
+}
 
 .content ul li:first-of-type {
   margin-top: 0px; 
+}
+
+.content ol { 
+  counter-reset: item; 
+}
+.content ol li { 
+  display: block; 
+}
+
+.content ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: var(--linkcolor);
+  padding-right: 0.2em;
+  font-weight: 600;
+}
+
+.content ol li ol { 
+  counter-reset: item2; 
+}
+
+.content ol li ol li:before {
+  content: counter(item)"."counter(item2) ". ";
+  counter-increment: item2;
+}
+
+.content ol li ol li ol { 
+  counter-reset: item3; 
+}
+
+.content ol li ol li ol li:before {
+  content: counter(item)"."counter(item2)"."counter(item3) ". ";
+  counter-increment: item3;
 }
 
 .content ol li:first-of-type {
@@ -730,6 +780,10 @@ content
   margin: 3px;
 }
 
+.content .seriesindex ol li::before{
+  content:none
+}
+
 .content .seriesindex ol li > span{
   background: var(--secondarycolor);
   border: 1px solid var(--secondarycolor);
@@ -743,11 +797,13 @@ content
 }
 
 .content pre{
-  font-family: monospace;
-  background: var(--tablealt);
-  border: 1px solid var(--secondarybackground);  
+  font-family: 'Courier New', Courier, monospace;
+  border: 3px solid var(--maincolor);
+  border-radius: 3px;
   width: 100%;
   padding: 3px;
+  font-weight: 500;
+  background-color: var(--codeback);
 }
 
 .content pre code{
@@ -785,7 +841,7 @@ content
   background-color: var(--cite); 
   border-radius: 3px;
   content: "“";
-  font-size: 1.1em;
+  font-weight: 900;
 }
 .content cite:after {
   padding: .2em;
@@ -793,49 +849,45 @@ content
   background-color: var(--cite); 
   border-radius: 3px;
   content: "”";
-  font-size: 1.1em;
-}
-
-.content blockquote {  
-  padding: 5px 15px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid var(--background);
-  border-radius: 4px;
-  font-style: italic ;
-  color: var(--transparentfontcolor);
-  background-color: var(--quote);
-}
-
-.content blockquote blockquote{  
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-top: 1px solid var(--transparentfontcolor);
-  border-bottom: 1px solid var(--transparentfontcolor);
-  border-left: none;
-  border-right: none;
-  border-radius: 0px;
-  margin-left: 10px;
-}
-
-.content blockquote:before {
-  position: relative;
-  margin-right: 3px;
-  top: -15px;
-  line-height: 0.5px;
-  border: 2px solid var(--background);
-  padding: 3px 10px;
-  border-radius: 4px;
   font-weight: 900;
-  color: var(--transparentfontcolor);
-  background-color: var(--quote);
-  content: "“ ”";
-  text-rendering: geometricPrecision;
 }
 
-.content blockquote blockquote:before {
-  content:none;
-  display: none;
+.content blockquote {
+  display: block;
+  width: auto;
+  padding: 5px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-style: italic;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--quotenested);
+}
+
+.content blockquote p,blockquote footer {  
+  margin-top: 2px;
+  margin-bottom: 2px;
+  display:block;
+  height: auto;
+  width: auto;
+  padding: 2px;
+}
+.content blockquote blockquote{  
+  margin: 5px;
+  margin-left: 2em;
+  background-color: var(--quotenested);
+  border: none
+}
+
+.content blockquote footer{
+  border: none;
+  border-top: 3px solid var(--quote);
+  font-style: normal;
+  border-radius: 0px;
+  text-align: right;
+  background-color: transparent;
+  width: 100%
 }
 
 .content .alert {
@@ -898,6 +950,20 @@ content
   margin-top: 0px;
 }
 
+.content dl {
+  margin: 1em;
+}
+.content dt {
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondarycolor);
+}
+.content dd {
+  display: block;
+  background-color: var(--tablealt);
+  margin-bottom: 1em;
+  padding: 0em 1em;
+}
+
 /*
 =======================================================================
 Side bar
@@ -950,7 +1016,6 @@ ul.tagcontainer li a{
   text-decoration: none;
 } 
 ul.tagcontainer li a:hover{
-  /* border: 2px solid var(--secondarylinkcolor); */
   border: 2px solid var(--linkcolor);
   text-decoration: none;
 } 
@@ -994,7 +1059,6 @@ ul.taglist{
 
 ul.taglist li{
   display: block;
-  border: 2px solid var(--secondarycolor);
   border-radius: 4px;
   margin-bottom: 10px;
 }
