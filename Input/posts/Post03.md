@@ -2,7 +2,7 @@
 Title: Post 04
 Published: 2/2/2018
 Tags: Post Series
-Serie: Article Series Test
+Series: Article Series Test
 ---
 
 

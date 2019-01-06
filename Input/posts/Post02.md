@@ -1,8 +1,7 @@
 ---
 Title: Post 02
 Published: 1/2/2018
-Tags: Post Series
-Serie: Article Series Test
+Tags: Test
 ---
 
 

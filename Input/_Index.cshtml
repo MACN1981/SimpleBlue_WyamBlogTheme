@@ -18,9 +18,9 @@ Title: Home
         .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) > Published)
         .OrderBy(x => x.Get<DateTime>(BlogKeys.Published))
         .FirstOrDefault();
-  string labelserie = Model.WithoutSettings.String("Serie");
+  string labelseries = Model.WithoutSettings.String("Series");
   IEnumerable<IDocument> postseries =  Documents[Blog.BlogPosts]
-    .Where(x => x.ContainsKey("Serie") && x.String("Serie") == labelserie)
+    .Where(x => x.ContainsKey("Series") && x.String("Series") == labelseries)
     .OrderBy(x => x.Get<DateTime>(BlogKeys.Published));
 }
 
@@ -45,11 +45,11 @@ Title: Home
     }
     </ul>
   }
-  @if (!string.IsNullOrWhiteSpace(labelserie)) 
+  @if (!string.IsNullOrWhiteSpace(labelseries)) 
   {
     int counter = 1;
-    <div class="serieindex">
-      <h5>@labelserie</h5>
+    <div class="seriesindex">
+      <h5>@labelseries</h5>
       <ol>
         @foreach (IDocument post in postseries)
         {
