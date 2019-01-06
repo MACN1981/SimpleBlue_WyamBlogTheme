@@ -11,6 +11,6 @@ A custom blog theme for [Wyam](http://Wyam.io). The available themes were a bit 
 
 ## The bad bits:
 
-	- No comments. If you want to add Disqus or any other comment system, you will have to add it yourself.
+  - No comments. If you want to add Disqus or any other comment system, you will have to add it yourself.
   - It does not work in Internet Explorer.
   
