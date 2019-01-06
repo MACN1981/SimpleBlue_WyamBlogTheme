@@ -55,24 +55,13 @@ var modeChange = function() {
 var setbacktotop = function() {
 
   var tooglebacktotop = function(offset) {
-    const viewport = Math.max(document.documentElement.clientHeight, window.innerHeight)
-    const marker01 = viewport * 0.1;
-    const marker02 = viewport;
-    const variation = 1/(marker02-marker01);
     const element = window.top.document.querySelectorAll('.backtotop')[0];
-    if (offset > marker01 && offset <= marker02)
-    {
-      element.style.opacity = 1 - ((marker02 - offset) * variation);
-      element.style.display = 'block';
+    if (offset === 0){
+      element.style.opacity = 0
     }
-    else if (offset > marker02)
+    else 
     {
       element.style.opacity = 1;
-      element.style.display = 'block';
-    }
-    else{
-      element.style.opacity = 0;
-      element.style.display = 'none';
     }
   }
 
