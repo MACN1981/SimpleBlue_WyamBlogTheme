@@ -17,13 +17,14 @@ Right | Left | Default | Center
 1     | 1    | 1       | 1
 
 
-**Extra Emphasis:**
+**Extra Emphasis and other formats:**
 
- - ~~strike through~~ example
- - ~subscript~ example
- - ^superscript^ example
- - ++inserted++ example
- - ==marked== example
+ - ~~strike through~~ 
+ - ~subscript~ 
+ - ^superscript^ 
+ - ++inserted++ 
+ - ==marked== 
+ - ""This is a cite""
 
 
 **Alerts:**
@@ -44,3 +45,16 @@ A warning alert.
 A danger alert.
 :::
 
+**Blockquote:**
+
+> This is a example of a quote
+>> with a nested quote
+>>> with a third nested quote
+
+**Abbreviations:**
+
+*[HTML]: Hypertext Mark-up Language
+*[CSS]: Cascade Style Sheet
+*[JS]: JavaScript 
+
+This blog is build using only HTML, CSS and JS

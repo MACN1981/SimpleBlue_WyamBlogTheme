@@ -23,6 +23,8 @@ body {
   --success:#dff0d8;
   --info:#a4dcf8;
   --danger:#f79390;
+  --quote:#fcce89;
+  --cite:#fddfb3;
 }
 
 /* dark mode*/
@@ -35,8 +37,8 @@ body.dark {
   --linkcolor:#76bffa;
   --secondarylinkcolor:#d1e8fc;
   --inactivetab:#555555;
-  --transparentfontcolor:rgba(25, 25, 25,0.75);
-
+  --transparentfontcolor:rgba(15, 15, 15,0.75);
+  --cite:#d68204;
 }
 
 /*
@@ -580,7 +582,7 @@ content
   font-style: italic;
 }
 
-.content p, blockquote, table, pre {
+.content p, table, pre {
   margin: 15px 0; 
 }
 
@@ -657,19 +659,6 @@ content
 
 .content table tbody tr:nth-of-type(odd) {
   background: var(--tablealt);
-}
-
-.content blockquote {  
-  border-bottom: 2px double var(--linkcolor);
-  border-top: 2px double var(--linkcolor);
-  margin: 5px;
-  width: 100%;
-  padding: 10px;
-  position: relative;
-  background-color: var(--coloredbackground);
-  font-family: Georgia, serif;
-  font-size: 1em;
-  display: block;
 }
 
 .content figure {
@@ -782,15 +771,81 @@ content
   border-radius: 3px;
 }
 
-.content .alert {
-    padding: 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid var(--background);
-    border-radius: 4px;
-    color: var(--transparentfontcolor);
+.content cite {
+  padding-top: .2em;
+  padding-bottom: .2em;
+  font-style: italic ;
+  background-color: var(--cite); 
+  border-radius: 3px;
 }
 
+.content cite:before {
+  padding: .2em;
+  padding-left: .3em;
+  background-color: var(--cite); 
+  border-radius: 3px;
+  content: "“";
+  font-size: 1.1em;
+}
+.content cite:after {
+  padding: .2em;
+  padding-right: .3em;
+  background-color: var(--cite); 
+  border-radius: 3px;
+  content: "”";
+  font-size: 1.1em;
+}
+
+.content blockquote {  
+  padding: 5px 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--background);
+  border-radius: 4px;
+  font-style: italic ;
+  color: var(--transparentfontcolor);
+  background-color: var(--quote);
+}
+
+.content blockquote blockquote{  
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: 1px solid var(--transparentfontcolor);
+  border-bottom: 1px solid var(--transparentfontcolor);
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+  margin-left: 10px;
+}
+
+.content blockquote:before {
+  position: relative;
+  margin-right: 3px;
+  top: -15px;
+  line-height: 0.5px;
+  border: 2px solid var(--background);
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 900;
+  color: var(--transparentfontcolor);
+  background-color: var(--quote);
+  content: "“ ”";
+  text-rendering: geometricPrecision;
+}
+
+.content blockquote blockquote:before {
+  content:none;
+  display: none;
+}
+
+.content .alert {
+  padding: 5px 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--background);
+  border-radius: 4px;
+  color: var(--transparentfontcolor);
+}
 .content .alert-success {
   background-color: var(--success);
 }
@@ -810,9 +865,7 @@ content
 .content .alert:before {
   position: relative;
   margin-right: 3px;
-  top: -20px;
-  font-style: normal;
-  font-weight: normal;
+  top: -15px;
   line-height: 1;
   border: 2px solid var(--background);
   padding: 3px 10px;
