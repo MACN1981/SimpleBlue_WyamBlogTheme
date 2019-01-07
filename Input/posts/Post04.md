@@ -1,5 +1,5 @@
 ---
-Title: Post 07
+Title: Markdown showcase
 Published: 2/4/2018
 Tags: Post Series
 Series: Article Series Test
@@ -7,6 +7,24 @@ Series: Article Series Test
 
 
 Showcase of markdown ([Markdig](https://github.com/lunet-io/markdig) flavour) elements
+
+**Titles:**
+
+# Title 01
+## Title 02
+### Title 03
+#### Title 04
+
+**Text:**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.
+
+Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio blandit, interdum tellus at, viverra odio. Aliquam risus lorem, rhoncus porttitor magna at, iaculis finibus dolor. Nam quis tristique augue. Sed eu fermentum turpis. Nunc at lacus sit amet nisl interdum commodo. Mauris non nunc at diam tempus ornare. Nulla feugiat, tortor eu aliquet dapibus, nisi elit ullamcorper tellus, sed accumsan nisi nibh vitae magna.
+
+**Image + Note**
+
+^^^
+![screenshot](../assets/images/Screen01.PNG)
+^^^ A screenshot of the blog.
 
 **Table:**
 
@@ -83,12 +101,15 @@ A danger alert.
 
 **Blockquote:**
 
-> This is a example of a quote
+
+> Whose woods these are I think I know.
 >
-> and another line
->> and a nested footnote
->> ^^ with its own citation
-> ^^ This is a example of citation for a quote
+> He will not see me stopping here
+>
+> To watch his woods fill up with snow.
+>
+> ^^ Robert Frost
+
 
 **Definition Lists:**
 

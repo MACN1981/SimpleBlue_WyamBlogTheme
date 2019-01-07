@@ -1,21 +1,21 @@
 @{
-    Layout = "_Layout";
-    var Lead = Model.WithoutSettings.String(BlogKeys.Lead);
-    var Published = Model.Get<DateTime>(BlogKeys.Published);
-    var Title = Model.WithoutSettings.String(BlogKeys.Title);
-    var Tags = Model.Get<string[]>(BlogKeys.Tags);
-    var previouspost =  Documents[Blog.BlogPosts]
-          .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) < Published)
-          .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
-          .FirstOrDefault();
-    var nextpost =  Documents[Blog.BlogPosts]
-          .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) > Published)
-          .OrderBy(x => x.Get<DateTime>(BlogKeys.Published))
-          .FirstOrDefault();
-    string labelseries = Model.WithoutSettings.String("Series");
-    IEnumerable<IDocument> postseries =  Documents[Blog.BlogPosts]
-      .Where(x => x.ContainsKey("Serie") && x.String("Series") == labelseries)
-      .OrderBy(x => x.Get<DateTime>(BlogKeys.Published));
+  Layout = "_Layout";
+  var Lead = Model.WithoutSettings.String(BlogKeys.Lead);
+  var Published = Model.Get<DateTime>(BlogKeys.Published);
+  var Title = Model.WithoutSettings.String(BlogKeys.Title);
+  var Tags = Model.Get<string[]>(BlogKeys.Tags);
+  var previouspost =  Documents[Blog.BlogPosts]
+        .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) < Published)
+        .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
+        .FirstOrDefault();
+  var nextpost =  Documents[Blog.BlogPosts]
+        .Where(x => x.ContainsKey(BlogKeys.Published) && x.Get<DateTime>(BlogKeys.Published) > Published)
+        .OrderBy(x => x.Get<DateTime>(BlogKeys.Published))
+        .FirstOrDefault();
+  string labelseries = Model.WithoutSettings.String("Series");
+  IEnumerable<IDocument> postseries =  Documents[Blog.BlogPosts]
+    .Where(x => x.ContainsKey("Series") && x.String("Series") == labelseries)
+    .OrderBy(x => x.Get<DateTime>(BlogKeys.Published));
 }
 
 <article class="content">

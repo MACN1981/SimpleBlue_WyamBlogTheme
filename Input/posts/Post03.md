@@ -1,5 +1,5 @@
 ---
-Title: Post 04
+Title: Long text
 Published: 2/2/2018
 Tags: Post Series
 Series: Article Series Test
