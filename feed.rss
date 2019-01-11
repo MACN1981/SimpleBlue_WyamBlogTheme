@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>Custom Blog</title>
+		<link>http://host.com/</link>
+		<description>Welcome!</description>
+		<copyright>2019</copyright>
+		<pubDate>Fri, 11 Jan 2019 21:16:52 GMT</pubDate>
+		<lastBuildDate>Fri, 11 Jan 2019 21:16:52 GMT</lastBuildDate>
+		<item>
+			<title>Markdown showcase</title>
+			<link>http://host.com/posts/Post04</link>
+			<description>&lt;p&gt;Showcase of markdown (&lt;a href="https://github.com/lunet-io/markdig"&gt;Markdig&lt;/a&gt; flavour) elements&lt;/p&gt;</description>
+			<guid>http://host.com/posts/Post04</guid>
+			<pubDate>Sun, 04 Feb 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Showcase of markdown (&lt;a href="https://github.com/lunet-io/markdig"&gt;Markdig&lt;/a&gt; flavour) elements&lt;/p&gt;
+&lt;h2 id="text-horizontal-rule"&gt;Text + Horizontal rule&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio blandit, interdum tellus at, viverra odio. Aliquam risus lorem, rhoncus porttitor magna at, iaculis finibus dolor. Nam quis tristique augue. Sed eu fermentum turpis. Nunc at lacus sit amet nisl interdum commodo. Mauris non nunc at diam tempus ornare. Nulla feugiat, tortor eu aliquet dapibus, nisi elit ullamcorper tellus, sed accumsan nisi nibh vitae magna.&lt;/p&gt;
+&lt;h2 id="titles"&gt;Titles&lt;/h2&gt;
+&lt;h1 id="title-01"&gt;Title 01&lt;/h1&gt;
+&lt;h2 id="title-02"&gt;Title 02&lt;/h2&gt;
+&lt;h3 id="title-03"&gt;Title 03&lt;/h3&gt;
+&lt;h4 id="title-04"&gt;Title 04&lt;/h4&gt;
+&lt;h2 id="image-note"&gt;Image + Note&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-MD"&gt;^^^
+![screenshot](/assets/Images/Screen01.PNG)
+^^^ A screenshot of the blog.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;figure&gt;
+&lt;p&gt;&lt;img src="/assets/Images/Screen01.PNG" alt="screenshot" /&gt;&lt;/p&gt;
+&lt;figcaption&gt;A screenshot of the blog.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id="table"&gt;Table&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: right;"&gt;Right&lt;/th&gt;
+&lt;th style="text-align: left;"&gt;Left&lt;/th&gt;
+&lt;th&gt;Default&lt;/th&gt;
+&lt;th style="text-align: center;"&gt;Center&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right;"&gt;12&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;12&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td style="text-align: center;"&gt;12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right;"&gt;123&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;123&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td style="text-align: center;"&gt;123&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right;"&gt;1&lt;/td&gt;
+&lt;td style="text-align: left;"&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td style="text-align: center;"&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="unordered-list"&gt;Unordered list&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Element 01&lt;/li&gt;
+&lt;li&gt;Element 02
+&lt;ul&gt;
+&lt;li&gt;Sub Element 01&lt;/li&gt;
+&lt;li&gt;Sub Element 02&lt;/li&gt;
+&lt;li&gt;Sub Element 03
+&lt;ul&gt;
+&lt;li&gt;Sub Sub Element 01&lt;/li&gt;
+&lt;li&gt;Sub Sub Element 02&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sub Element 04&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Element 03&lt;/li&gt;
+&lt;li&gt;Element 04&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ordered-list"&gt;Ordered list&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Element 01&lt;/li&gt;
+&lt;li&gt;Element 02
+&lt;ol&gt;
+&lt;li&gt;Sub Element 01&lt;/li&gt;
+&lt;li&gt;Sub Element 02&lt;/li&gt;
+&lt;li&gt;Sub Element 03
+&lt;ol&gt;
+&lt;li&gt;Sub Sub Element 01&lt;/li&gt;
+&lt;li&gt;Sub Sub Element 02&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Sub Element 04&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Element 03&lt;/li&gt;
+&lt;li&gt;Element 04&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="code"&gt;Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-CSS"&gt;.content cite:after {
+    padding: .2em;
+    padding-right: .3em;
+    background-color: var(--cite); 
+    border-radius: 3px;
+    content: &amp;quot;”&amp;quot;;
+    font-weight: 900;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id="extra-emphasis-and-other-formats"&gt;Extra Emphasis and other formats&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-MD"&gt;- ~~strike through~~ 
+- ~subscript~ 
+- ^superscript^ 
+- ++inserted++ 
+- ==marked== 
+- &amp;quot;&amp;quot;This is a cite&amp;quot;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;del&gt;strike through&lt;/del&gt;&lt;/li&gt;
+&lt;li&gt;&lt;sub&gt;subscript&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;&lt;sup&gt;superscript&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;&lt;ins&gt;inserted&lt;/ins&gt;&lt;/li&gt;
+&lt;li&gt;&lt;mark&gt;marked&lt;/mark&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;This is a cite&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="custom-containers"&gt;Custom Containers&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-MD"&gt;:::{.alert .alert-info}
+A info alert.
+:::
+:::{.alert .alert-success}
+A success alert.
+:::
+:::{.alert .alert-warning}
+A warning alert.
+:::
+:::{.alert .alert-danger}
+A danger alert.
+:::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="alert alert-info"&gt;&lt;p&gt;A info alert.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-success"&gt;&lt;p&gt;A success alert.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;&lt;p&gt;A warning alert.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-danger"&gt;&lt;p&gt;A danger alert.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id="blockquote"&gt;Blockquote&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-MD"&gt;&amp;gt; Whose woods these are I think I know.
+&amp;gt;
+&amp;gt; He will not see me stopping here
+&amp;gt;
+&amp;gt; To watch his woods fill up with snow.
+&amp;gt;
+&amp;gt; ^^ Robert Frost
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whose woods these are I think I know.&lt;/p&gt;
+&lt;p&gt;He will not see me stopping here&lt;/p&gt;
+&lt;p&gt;To watch his woods fill up with snow.&lt;/p&gt;
+&lt;footer&gt;Robert Frost&lt;/footer&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="definition-lists"&gt;Definition Lists&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-MD"&gt;Static Web Page
+:   A static web page (sometimes called a flat page/stationary page) is a web page that is delivered to the user exactly as stored, in contrast to dynamic web pages which are generated by a web application. 
+
+Wyam
+:   It's a static content toolkit and can be used to generate web sites, produce documentation, create e-books, and much more
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;dl&gt;
+&lt;dt&gt;Static Web Page&lt;/dt&gt;
+&lt;dd&gt;A static web page (sometimes called a flat page/stationary page) is a web page that is delivered to the user exactly
+as stored, in contrast to dynamic web pages which are generated by a web application.&lt;/dd&gt;
+&lt;dt&gt;Wyam&lt;/dt&gt;
+&lt;dd&gt;It's a static content toolkit and can be used to generate web sites, produce documentation, create e-books, and much more&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id="abbreviations"&gt;Abbreviations&lt;/h2&gt;
+&lt;pre&gt;&lt;code class="language-MD"&gt;*[HTML]: Hypertext Mark-up Language
+*[CSS]: Cascade Style Sheet
+*[JS]: JavaScript 
+
+This blog is build using only HTML, CSS and JS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This blog is build using only &lt;abbr title="Hypertext Mark-up Language"&gt;HTML&lt;/abbr&gt;, &lt;abbr title="Cascade Style Sheet"&gt;CSS&lt;/abbr&gt; and &lt;abbr title="JavaScript"&gt;JS&lt;/abbr&gt;&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Long text</title>
+			<link>http://host.com/posts/Post03</link>
+			<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.&lt;/p&gt;</description>
+			<guid>http://host.com/posts/Post03</guid>
+			<pubDate>Fri, 02 Feb 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.&lt;/p&gt;
+&lt;p&gt;Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio blandit, interdum tellus at, viverra odio. Aliquam risus lorem, rhoncus porttitor magna at, iaculis finibus dolor. Nam quis tristique augue. Sed eu fermentum turpis. Nunc at lacus sit amet nisl interdum commodo. Mauris non nunc at diam tempus ornare. Nulla feugiat, tortor eu aliquet dapibus, nisi elit ullamcorper tellus, sed accumsan nisi nibh vitae magna.&lt;/p&gt;
+&lt;p&gt;Etiam congue odio leo, vel laoreet nisi feugiat ut. Sed id felis at sapien eleifend lacinia. Morbi dictum mauris et volutpat condimentum. Etiam lacinia velit vel diam tincidunt blandit. Phasellus vitae porta lorem, ut suscipit lorem. Donec ornare euismod nibh, ut commodo sapien sodales non. Quisque porttitor nisi nec ultrices pellentesque. Nunc vitae dui id elit hendrerit scelerisque sed eget erat. Phasellus fringilla, urna a sagittis blandit, libero neque dictum urna, nec dictum lectus erat ut tellus.&lt;/p&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.&lt;/p&gt;
+&lt;p&gt;Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio blandit, interdum tellus at, viverra odio. Aliquam risus lorem, rhoncus porttitor magna at, iaculis finibus dolor. Nam quis tristique augue. Sed eu fermentum turpis. Nunc at lacus sit amet nisl interdum commodo. Mauris non nunc at diam tempus ornare. Nulla feugiat, tortor eu aliquet dapibus, nisi elit ullamcorper tellus, sed accumsan nisi nibh vitae magna.&lt;/p&gt;
+&lt;p&gt;Etiam congue odio leo, vel laoreet nisi feugiat ut. Sed id felis at sapien eleifend lacinia. Morbi dictum mauris et volutpat condimentum. Etiam lacinia velit vel diam tincidunt blandit. Phasellus vitae porta lorem, ut suscipit lorem. Donec ornare euismod nibh, ut commodo sapien sodales non. Quisque porttitor nisi nec ultrices pellentesque. Nunc vitae dui id elit hendrerit scelerisque sed eget erat. Phasellus fringilla, urna a sagittis blandit, libero neque dictum urna, nec dictum lectus erat ut tellus.&lt;/p&gt;
+&lt;p&gt;Morbi ut erat lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus consequat velit eget interdum. Duis nisi augue, rutrum sit amet dui ut, pretium porttitor mauris. Nulla facilisi. Mauris at condimentum velit, a dictum neque. Integer dolor neque, gravida et elit et, lobortis vestibulum mauris. Proin arcu nibh, maximus in mauris non, semper luctus ipsum. Nulla eleifend eleifend enim non consequat.&lt;/p&gt;
+&lt;p&gt;Morbi eu quam id tellus lobortis gravida eget at nulla. Cras ut libero id purus tincidunt suscipit. Proin id ligula velit. Proin convallis dignissim sapien, a consequat urna cursus nec. Praesent efficitur dolor dictum finibus feugiat. Ut a dolor non nisl ullamcorper molestie. Etiam in diam tempus, semper mauris in, tincidunt neque.&lt;/p&gt;
+&lt;p&gt;Proin finibus ultrices fermentum. Nunc luctus libero id magna porta, efficitur consectetur leo volutpat. Aliquam erat volutpat. Phasellus tempus ex non mauris tempor tincidunt. Maecenas ac nunc imperdiet, mattis magna non, porttitor magna. Suspendisse mollis posuere tempus. Aliquam sit amet enim sagittis, tincidunt est a, pretium risus.&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Welcome all</title>
+			<link>http://host.com/posts/Welcome</link>
+			<description>&lt;p&gt;First Article of the blog&lt;/p&gt;</description>
+			<guid>http://host.com/posts/Welcome</guid>
+			<pubDate>Mon, 01 Jan 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;First Article of the blog&lt;/p&gt;
+</content:encoded>
+		</item>
+	</channel>
+</rss>

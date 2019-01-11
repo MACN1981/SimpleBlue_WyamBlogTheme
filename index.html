@@ -1,0 +1,332 @@
+﻿
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Welcome!" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="application-name" content="Custom Blog" />
+  <meta name="msapplication-tooltip" content="Custom Blog" />
+  <meta name="msapplication-starturl" content="/" />
+  <meta property="og:title" content="Custom Blog - Home" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://host.com/" />
+  <title>Custom Blog - Home</title>
+  <link type="application/rss+xml" rel="alternate" title="Custom Blog" href="/feed.rss" />
+  <link type="application/atom+xml" rel="alternate" title="Custom Blog" href="/feed.atom" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="/assets/CSS/reset.css">
+<link rel="stylesheet" type="text/css" href="/assets/CSS/styles.css">
+</head>
+
+<body class="container">
+  <div class="wrapper">
+    <header id="pagetop" aria-role="banner">
+      <span class="logo">Custom Blog</span>
+    </header>
+    <nav class="navigationmenu" aria-role="menu">
+  <input type="checkbox" data-accordion id="ButtonMenu" class="buttonmenu"/>
+  <label for="ButtonMenu" class="buttonmenulabel">MENU</label> 
+  <ul>
+      <li aria-role="menuitem"><a href="" class="activemenu">Posts</a></li>
+                  <li aria-role="menuitem"><a href="/posts" >Archive</a></li>
+              <li aria-role="menuitem"><a href="/tags" >Tags</a></li>
+              <li aria-role="menuitem"><a href="/about" >About</a></li>
+    <li aria-role="menuitem" class="hideonnoscript">
+      <div class="themeChanger" >
+        <p>Theme </p>
+        <div class="themeCheckbox">
+          <input type="checkbox" id="buttondarkmode"/>
+          <label for="buttondarkmode"> </label>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+    <section id="main" aria-role="main" >
+
+<article class="content">
+    <time class="published" aria-label="Published">Sunday, February 4, 2018</time>
+  <h1>Markdown showcase</h1>
+    <ul class="tagcontainer">
+          <li>
+            <a aria-role="button" href="/tags/Post-Series"> Post Series </a>
+          </li>
+    </ul>
+      <div class="seriesindex">
+      <h5>Article Series Test</h5>
+      <ol>
+          <li>
+            <span>1</span><a aria-role="button" href="/posts/Post03">Long text </a>
+          </li>
+          <li>
+            <span>2</span><b>Markdown showcase</b>
+          </li>
+      </ol>
+    </div>
+  <p>Showcase of markdown (<a href="https://github.com/lunet-io/markdig">Markdig</a> flavour) elements</p>
+<h2 id="text-horizontal-rule">Text + Horizontal rule</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.</p>
+<hr />
+<p>Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio blandit, interdum tellus at, viverra odio. Aliquam risus lorem, rhoncus porttitor magna at, iaculis finibus dolor. Nam quis tristique augue. Sed eu fermentum turpis. Nunc at lacus sit amet nisl interdum commodo. Mauris non nunc at diam tempus ornare. Nulla feugiat, tortor eu aliquet dapibus, nisi elit ullamcorper tellus, sed accumsan nisi nibh vitae magna.</p>
+<h2 id="titles">Titles</h2>
+<h1 id="title-01">Title 01</h1>
+<h2 id="title-02">Title 02</h2>
+<h3 id="title-03">Title 03</h3>
+<h4 id="title-04">Title 04</h4>
+<h2 id="image-note">Image + Note</h2>
+<pre><code class="language-MD">^^^
+![screenshot](/assets/Images/Screen01.PNG)
+^^^ A screenshot of the blog.
+</code></pre>
+<figure>
+<p><img src="/assets/Images/Screen01.PNG" alt="screenshot" /></p>
+<figcaption>A screenshot of the blog.</figcaption>
+</figure>
+<h2 id="table">Table</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Right</th>
+<th style="text-align: left;">Left</th>
+<th>Default</th>
+<th style="text-align: center;">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: left;">12</td>
+<td>12</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: right;">123</td>
+<td style="text-align: left;">123</td>
+<td>123</td>
+<td style="text-align: center;">123</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">1</td>
+<td>1</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unordered-list">Unordered list</h2>
+<ul>
+<li>Element 01</li>
+<li>Element 02
+<ul>
+<li>Sub Element 01</li>
+<li>Sub Element 02</li>
+<li>Sub Element 03
+<ul>
+<li>Sub Sub Element 01</li>
+<li>Sub Sub Element 02</li>
+</ul>
+</li>
+<li>Sub Element 04</li>
+</ul>
+</li>
+<li>Element 03</li>
+<li>Element 04</li>
+</ul>
+<h2 id="ordered-list">Ordered list</h2>
+<ol>
+<li>Element 01</li>
+<li>Element 02
+<ol>
+<li>Sub Element 01</li>
+<li>Sub Element 02</li>
+<li>Sub Element 03
+<ol>
+<li>Sub Sub Element 01</li>
+<li>Sub Sub Element 02</li>
+</ol>
+</li>
+<li>Sub Element 04</li>
+</ol>
+</li>
+<li>Element 03</li>
+<li>Element 04</li>
+</ol>
+<h2 id="code">Code</h2>
+<pre><code class="language-CSS">.content cite:after {
+    padding: .2em;
+    padding-right: .3em;
+    background-color: var(--cite); 
+    border-radius: 3px;
+    content: &quot;”&quot;;
+    font-weight: 900;
+}
+</code></pre>
+<h2 id="extra-emphasis-and-other-formats">Extra Emphasis and other formats</h2>
+<pre><code class="language-MD">- ~~strike through~~ 
+- ~subscript~ 
+- ^superscript^ 
+- ++inserted++ 
+- ==marked== 
+- &quot;&quot;This is a cite&quot;&quot;
+</code></pre>
+<ul>
+<li><del>strike through</del></li>
+<li><sub>subscript</sub></li>
+<li><sup>superscript</sup></li>
+<li><ins>inserted</ins></li>
+<li><mark>marked</mark></li>
+<li><cite>This is a cite</cite></li>
+</ul>
+<h2 id="custom-containers">Custom Containers</h2>
+<pre><code class="language-MD">:::{.alert .alert-info}
+A info alert.
+:::
+:::{.alert .alert-success}
+A success alert.
+:::
+:::{.alert .alert-warning}
+A warning alert.
+:::
+:::{.alert .alert-danger}
+A danger alert.
+:::
+</code></pre>
+<div class="alert alert-info"><p>A info alert.</p>
+</div>
+<div class="alert alert-success"><p>A success alert.</p>
+</div>
+<div class="alert alert-warning"><p>A warning alert.</p>
+</div>
+<div class="alert alert-danger"><p>A danger alert.</p>
+</div>
+<h2 id="blockquote">Blockquote</h2>
+<pre><code class="language-MD">&gt; Whose woods these are I think I know.
+&gt;
+&gt; He will not see me stopping here
+&gt;
+&gt; To watch his woods fill up with snow.
+&gt;
+&gt; ^^ Robert Frost
+</code></pre>
+<blockquote>
+<p>Whose woods these are I think I know.</p>
+<p>He will not see me stopping here</p>
+<p>To watch his woods fill up with snow.</p>
+<footer>Robert Frost</footer>
+</blockquote>
+<h2 id="definition-lists">Definition Lists</h2>
+<pre><code class="language-MD">Static Web Page
+:   A static web page (sometimes called a flat page/stationary page) is a web page that is delivered to the user exactly as stored, in contrast to dynamic web pages which are generated by a web application. 
+
+Wyam
+:   It's a static content toolkit and can be used to generate web sites, produce documentation, create e-books, and much more
+
+</code></pre>
+<dl>
+<dt>Static Web Page</dt>
+<dd>A static web page (sometimes called a flat page/stationary page) is a web page that is delivered to the user exactly
+as stored, in contrast to dynamic web pages which are generated by a web application.</dd>
+<dt>Wyam</dt>
+<dd>It's a static content toolkit and can be used to generate web sites, produce documentation, create e-books, and much more</dd>
+</dl>
+<h2 id="abbreviations">Abbreviations</h2>
+<pre><code class="language-MD">*[HTML]: Hypertext Mark-up Language
+*[CSS]: Cascade Style Sheet
+*[JS]: JavaScript 
+
+This blog is build using only HTML, CSS and JS
+</code></pre>
+<p>This blog is build using only <abbr title="Hypertext Mark-up Language">HTML</abbr>, <abbr title="Cascade Style Sheet">CSS</abbr> and <abbr title="JavaScript">JS</abbr></p>
+
+</article>
+<nav class="navlinks">
+    <a href="/posts/Post03" class="navprevious" aria-label="Previous post">
+      <span class="fullnavlink">Long text</span>
+      <span class="shortnavlink">Previous</span>
+    </a>
+  </nav>
+<nav class="sidebar" aria-label="feeds, tags and index">
+  <!--Feeds-->
+  <h1>Feeds</h1>
+  <ul class="feedscontainer">
+      <li>
+        <a href="/feed.rss">RSS</a>
+      </li>
+          <li>
+        <a href="/feed.atom">Atom</a>
+      </li>
+  </ul>
+  <!--tags-->
+  <h1>Tags</h1>
+  <ul class="tagcontainer">
+        <li>
+          <a aria-role="button" href="/tags/Post-Series"> Post Series (2)</a>
+        </li>
+        <li>
+          <a aria-role="button" href="/tags/introduction"> introduction (1)</a>
+        </li>
+  </ul>
+  <!--Archive-->
+  <h1>Archive</h1>
+  <ol class="archivetree">
+        <li>
+            <input type="checkbox" checked id="Y2018" />
+          <label for="Y2018">2018 (3)</label> 
+          <ol>
+              <li>
+                  <input type="checkbox" checked id="Y2018February" />
+                <input type="checkbox" id="Y2018February" />
+                <label for="Y2018February">February (2)</label> 
+                <ol>
+                    <li class="archivelink">
+                    
+                      <strong>Markdown showcase</strong>
+
+                    </li>
+                    <li class="archivelink">
+                    
+                      <a href="/posts/Post03">Long text</a>
+
+                    </li>
+                </ol>
+              </li>
+              <li>
+                  <input type="checkbox" id="Y2018January" />
+                <input type="checkbox" id="Y2018January" />
+                <label for="Y2018January">January (1)</label> 
+                <ol>
+                    <li class="archivelink">
+                    
+                      <a href="/posts/Welcome">Welcome all</a>
+
+                    </li>
+                </ol>
+              </li>
+          </ol>
+        </li>
+  </ol>
+</nav>
+
+    </section>
+    <footer aria-role="contentinfo">
+      <hr>
+      <div class="innerfooter">
+        <strong>Copyright © 2019 - <a href="https://wyam.io">Generated by Wyam</a></strong>
+      </div>
+    </footer>
+    <div class="backtotop showonnoscript" title="Return to Top" id="backtotop">
+      <a href="#pagetop">
+        <span>^</span>
+      </a>
+    </div>
+  </div>
+  <script src="/assets/JS/scripts.js"></script>
+
+  <base>
+</body>
+
+</html>
