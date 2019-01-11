@@ -4,8 +4,9 @@
 
 // Customize your settings and add new ones here
 Settings[Keys.Host] = "host.com";
-//Settings[Keys.LinksUseHttps] = true;
-//Settings[Keys.LinkRoot] = "repo";
+// Settings[Keys.Host] = "macn1981.github.io/";
+// Settings[Keys.LinksUseHttps] = true;
+// Settings[Keys.LinkRoot] = "SimpleBlue_WyamBlogTheme";
 Settings[BlogKeys.Title] = "Custom Blog";
 Settings[BlogKeys.Description] = "Welcome!";
 Settings[BlogKeys.MarkdownConfiguration] ="advanced+figures+customcontainers";

@@ -28,8 +28,9 @@ Title: Tags
       @if(postcount <= posttotal)
       {
         postcount = postcount + 1;
-        <br>
       }
+      <a href="@Context.GetLink(post)">read more...</a>
+      <br>
     </li>
   }
 </ul>

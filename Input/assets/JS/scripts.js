@@ -56,7 +56,7 @@ var setbacktotop = function() {
 
   var tooglebacktotop = function(offset) {
     const element = window.top.document.querySelectorAll('.backtotop')[0];
-    if (offset === 0){
+    if (offset <= 1){
       element.style.opacity = 0
     }
     else 
@@ -78,15 +78,21 @@ var setbacktotop = function() {
   }
 
   window.onscroll = throttleevent;
-  tooglebacktotop();
+  tooglebacktotop(0);
 }
 
 //show elements that only work with javascript
 var hideNoScript = function() {
-  const elementstohide = window.top.document.querySelectorAll('.noscript');
+  const elementstoshow = window.top.document.querySelectorAll('.hideonnoscript');
+  for (let index = 0; index < elementstoshow.length; index++) {
+    const element = elementstoshow[index];
+    element.classList.remove('hideonnoscript');
+  }
+
+  const elementstohide = window.top.document.querySelectorAll('.showonnoscript');
   for (let index = 0; index < elementstohide.length; index++) {
     const element = elementstohide[index];
-    element.classList.remove('noscript');
+    element.classList.remove('showonnoscript');
   }
 }
 
