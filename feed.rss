@@ -2,16 +2,16 @@
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 	<channel>
 		<title>Custom Blog</title>
-		<link>http://host.com/</link>
+		<link>https://macn1981.github.io//SimpleBlue_WyamBlogTheme</link>
 		<description>Welcome!</description>
 		<copyright>2019</copyright>
-		<pubDate>Fri, 11 Jan 2019 21:16:52 GMT</pubDate>
-		<lastBuildDate>Fri, 11 Jan 2019 21:16:52 GMT</lastBuildDate>
+		<pubDate>Fri, 11 Jan 2019 21:49:31 GMT</pubDate>
+		<lastBuildDate>Fri, 11 Jan 2019 21:49:31 GMT</lastBuildDate>
 		<item>
 			<title>Markdown showcase</title>
-			<link>http://host.com/posts/Post04</link>
+			<link>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Post04</link>
 			<description>&lt;p&gt;Showcase of markdown (&lt;a href="https://github.com/lunet-io/markdig"&gt;Markdig&lt;/a&gt; flavour) elements&lt;/p&gt;</description>
-			<guid>http://host.com/posts/Post04</guid>
+			<guid>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Post04</guid>
 			<pubDate>Sun, 04 Feb 2018 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;p&gt;Showcase of markdown (&lt;a href="https://github.com/lunet-io/markdig"&gt;Markdig&lt;/a&gt; flavour) elements&lt;/p&gt;
 &lt;h2 id="text-horizontal-rule"&gt;Text + Horizontal rule&lt;/h2&gt;
@@ -191,9 +191,9 @@ This blog is build using only HTML, CSS and JS
 		</item>
 		<item>
 			<title>Long text</title>
-			<link>http://host.com/posts/Post03</link>
+			<link>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Post03</link>
 			<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.&lt;/p&gt;</description>
-			<guid>http://host.com/posts/Post03</guid>
+			<guid>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Post03</guid>
 			<pubDate>Fri, 02 Feb 2018 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam justo augue, eget pharetra justo lacinia et. Vestibulum et sem id ante egestas rutrum. Fusce ligula justo, iaculis vel auctor a, laoreet sit amet lectus. Nunc molestie enim lectus, quis condimentum sem rutrum aliquam. Duis pharetra leo est, non semper eros luctus vel. Nulla sem nulla, commodo nec fringilla ut, pretium at nibh. Etiam faucibus diam at dui pharetra tincidunt. Phasellus consequat placerat justo, lobortis scelerisque nulla malesuada sed. Quisque laoreet tortor orci, ut placerat mi blandit sed. Duis leo mauris, commodo nec scelerisque egestas, mattis ut arcu. Aliquam mollis arcu in orci tincidunt, sed faucibus lacus facilisis. Ut eu est nec nisl rutrum semper.&lt;/p&gt;
 &lt;p&gt;Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio blandit, interdum tellus at, viverra odio. Aliquam risus lorem, rhoncus porttitor magna at, iaculis finibus dolor. Nam quis tristique augue. Sed eu fermentum turpis. Nunc at lacus sit amet nisl interdum commodo. Mauris non nunc at diam tempus ornare. Nulla feugiat, tortor eu aliquet dapibus, nisi elit ullamcorper tellus, sed accumsan nisi nibh vitae magna.&lt;/p&gt;
@@ -208,9 +208,9 @@ This blog is build using only HTML, CSS and JS
 		</item>
 		<item>
 			<title>Welcome all</title>
-			<link>http://host.com/posts/Welcome</link>
+			<link>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Welcome</link>
 			<description>&lt;p&gt;First Article of the blog&lt;/p&gt;</description>
-			<guid>http://host.com/posts/Welcome</guid>
+			<guid>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Welcome</guid>
 			<pubDate>Mon, 01 Jan 2018 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;p&gt;First Article of the blog&lt;/p&gt;
 </content:encoded>
