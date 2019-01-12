@@ -13,7 +13,8 @@ body {
   --coloredbackground:#d1e8fc80;
   --fontcolor:#020202;
   --alternatefontcolor:#888888;
-  --secondaryfontcolor:#fdfdfd;
+  --reversefontcolor:#fdfdfd;
+  --alternatereversefontcolor:#fdfdfd; 
   --linkcolor:#005aa3;  
   --secondarylinkcolor:#0087f5;
   --tablealt:#d1e8fc80;
@@ -37,7 +38,8 @@ body.dark {
   --tablealt:#485661;
   --fontcolor:#fdfdfd;
   --alternatefontcolor:#A9A9A9;
-  --secondaryfontcolor:#020202;
+  --reversefontcolor:#020202;
+  --alternatereversefontcolor:#888888;
   --linkcolor:#76bffa;
   --secondarylinkcolor:#d1e8fc;
   --inactivetab:#555555;
@@ -264,7 +266,7 @@ nav.navigationmenu .buttonmenulabel{
   color: var(--white);
   padding: 1em;
   text-align: center;
-  border-top:  1px solid var(--secondaryfontcolor);
+  border-top:  1px solid var(--alternatereversefontcolor);
   font-weight: 500;
   font-size: 1.1em;
   cursor: pointer;
@@ -830,7 +832,7 @@ content
   padding: 3px 10px;
   font-size: 1.1em;
   font-weight: 900;
-  color: var(--secondaryfontcolor);
+  color: var(--reversefontcolor);
   background-color: var(--tertiarycolor );
   content: "CODE\A";
   display:block;
@@ -1293,7 +1295,7 @@ media queries
 
   nav.navigationmenu ul li a {
     background-color: var(--inactivetab);
-    border-bottom:  1px solid var(---alternatefontcolor);
+    border-bottom:  1px solid var(--alternatefontcolor);
     border-radius: 5px 5px 0px 0px;
     border-left:  1px solid var(--secondarycolor);
     border-right:  1px solid var(--secondarycolor);
