@@ -29,12 +29,12 @@ Etiam malesuada elit eros, in iaculis sapien rutrum eu. Pellentesque eu odio bla
 
 ```MD
 ^^^
-![screenshot](/assets/Images/Screen01.PNG)
+![screenshot](../assets/Images/Screen01.PNG)
 ^^^ A screenshot of the blog.
 ```
 
 ^^^
-![screenshot](/assets/Images/Screen01.PNG)
+![screenshot](../assets/Images/Screen01.PNG)
 ^^^ A screenshot of the blog.
 
 

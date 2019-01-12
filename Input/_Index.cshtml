@@ -19,6 +19,8 @@ Title: Home
         .OrderBy(x => x.Get<DateTime>(BlogKeys.Published))
         .FirstOrDefault();
   string labelseries = Model.WithoutSettings.String("Series");
+  //Model.Content(Model.Content.Replace("../", ""));
+  IDocument FixedModel = Context.GetDocument(Context.GetContentStream(Model.Content.Replace("../", "")));
   IEnumerable<IDocument> postseries =  Documents[Blog.BlogPosts]
     .Where(x => x.ContainsKey("Series") && x.String("Series") == labelseries)
     .OrderBy(x => x.Get<DateTime>(BlogKeys.Published));
@@ -68,7 +70,7 @@ Title: Home
       </ol>
     </div>
   }
-  @Html.Raw(@Model)
+  @Html.Raw(@FixedModel)
 </article>
 <nav class="navlinks">
   @if(previouspost != null)
