@@ -4,28 +4,29 @@ Variables
 =======================================================================
 */
 body {
-  --maincolor:rgb(57, 126, 182);
+  --maincolor:#397eb6;
   --secondarycolor:#5b97c9;
-  --tertiarycolor:rgb(130, 175, 213);
+  --tertiarycolor:#82afd5;
   --white:#ffffff;
   --background:#ffffff;
   --secondarybackground:#d1e8fc;
-  --coloredbackground:rgba(209, 232, 252,0.5);
-  --fontcolor:rgb(2, 2, 2);
+  --coloredbackground:#d1e8fc80;
+  --fontcolor:#020202;
+  --alternatefontcolor:#888888;
   --secondaryfontcolor:#fdfdfd;
   --linkcolor:#005aa3;  
   --secondarylinkcolor:#0087f5;
-  --tablealt:rgba(209, 232, 252,0.5);
+  --tablealt:#d1e8fc80;
   --inactivetab:#d1e8fc;
-  --transparentfontcolor:rgba(25,25,25,0.75);
-  --markcolor:rgb(233,233, 0);
+  --transparentfontcolor:#191919bf;
+  --markcolor:#e9e900;
   --warning:#f8e06a;
   --success:#dff0d8;
   --info:#a4dcf8;
   --danger:#f79390;
-  --quote:rgb(185, 162, 104);
-  --quoteback:rgba(253, 223, 179,0.5);
-  --cite:rgb(253, 223, 179);
+  --quote:#b9a268;
+  --quoteback:#fddfb380;
+  --cite:#fddfb3;
   --codeback: #f1efeb;
 }
 
@@ -35,14 +36,15 @@ body.dark {
   --secondarybackground:#8097aa;
   --tablealt:#485661;
   --fontcolor:#fdfdfd;
+  --alternatefontcolor:#A9A9A9;
   --secondaryfontcolor:#020202;
   --linkcolor:#76bffa;
   --secondarylinkcolor:#d1e8fc;
   --inactivetab:#555555;
-  --transparentfontcolor:rgba(15, 15, 15,0.75);
-  --cite:rgb(214, 130, 4);
-  --quote:rgb(214, 130, 4);
-  --quoteback:rgba(253, 223, 179,0.3);
+  --transparentfontcolor:#0f0f0fbf;
+  --cite:#d68204;
+  --quote:#d68204;
+  --quoteback:#fddfb34d;
   --codeback: #646464;
 }
 
@@ -103,7 +105,7 @@ a:hover{
   margin: 0;
   display: block;
   font-size: 1.5em;
-  color: #fff;
+  color: var(--white);
   padding: .5em 1em .5em .5em;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
@@ -305,7 +307,7 @@ div.backtotop{
   background-color:var(--linkcolor); 
   border: 4px solid  var(--background);
   border-radius:10px;
-  color: white;
+  color:var(--white);
   cursor: pointer;
   font-size: 1.5em;
   padding: 9px;
@@ -580,7 +582,7 @@ content
 }
 
 .content h6 {
-  color: #777;
+  color: var(--alternatefontcolor);
   font-size: 1em; 
 }
 
@@ -808,7 +810,6 @@ content
 }
 
 .content pre{
-  /* font-family: 'Courier New', Courier, monospace; */
   font-family: "Source Code Pro", Menlo, Consolas, Monaco, monospace;
   border: 1px solid var(--tertiarycolor);
   border-radius: 3px;
@@ -1288,12 +1289,11 @@ media queries
   nav.navigationmenu ul{ 
     display: flex !important;
     width: 100%;
-    /* grid-template-columns: 150px 150px 150px 1fr; */
   }
 
   nav.navigationmenu ul li a {
     background-color: var(--inactivetab);
-    border-bottom:  1px solid #AAAAAA;
+    border-bottom:  1px solid var(---alternatefontcolor);
     border-radius: 5px 5px 0px 0px;
     border-left:  1px solid var(--secondarycolor);
     border-right:  1px solid var(--secondarycolor);
