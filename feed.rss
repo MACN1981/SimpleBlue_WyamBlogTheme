@@ -5,8 +5,8 @@
 		<link>https://macn1981.github.io//SimpleBlue_WyamBlogTheme</link>
 		<description>Welcome!</description>
 		<copyright>2019</copyright>
-		<pubDate>Fri, 11 Jan 2019 21:49:31 GMT</pubDate>
-		<lastBuildDate>Fri, 11 Jan 2019 21:49:31 GMT</lastBuildDate>
+		<pubDate>Sat, 12 Jan 2019 21:12:45 GMT</pubDate>
+		<lastBuildDate>Sat, 12 Jan 2019 21:12:45 GMT</lastBuildDate>
 		<item>
 			<title>Markdown showcase</title>
 			<link>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Post04</link>
@@ -25,15 +25,15 @@
 &lt;h4 id="title-04"&gt;Title 04&lt;/h4&gt;
 &lt;h2 id="image-note"&gt;Image + Note&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-MD"&gt;^^^
-![screenshot](/assets/Images/Screen01.PNG)
+![screenshot](../assets/Images/Screen01.PNG)
 ^^^ A screenshot of the blog.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;figure&gt;
-&lt;p&gt;&lt;img src="/assets/Images/Screen01.PNG" alt="screenshot" /&gt;&lt;/p&gt;
-&lt;figcaption&gt;A screenshot of the blog.&lt;/figcaption&gt;
+&lt;figure class="figure"&gt;
+&lt;p&gt;&lt;img src="../assets/Images/Screen01.PNG" class="img-fluid" alt="screenshot" /&gt;&lt;/p&gt;
+&lt;figcaption class="figure-caption"&gt;A screenshot of the blog.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h2 id="table"&gt;Table&lt;/h2&gt;
-&lt;table&gt;
+&lt;table class="table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: right;"&gt;Right&lt;/th&gt;
@@ -158,7 +158,7 @@ A danger alert.
 &amp;gt;
 &amp;gt; ^^ Robert Frost
 &lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Whose woods these are I think I know.&lt;/p&gt;
 &lt;p&gt;He will not see me stopping here&lt;/p&gt;
 &lt;p&gt;To watch his woods fill up with snow.&lt;/p&gt;

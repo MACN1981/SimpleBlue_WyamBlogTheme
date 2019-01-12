@@ -4,7 +4,7 @@
 	<title>Custom Blog</title>
 	<link rel="self" href="https://macn1981.github.io//SimpleBlue_WyamBlogTheme" />
 	<rights>2019</rights>
-	<updated>2019-01-11T21:49:31Z</updated>
+	<updated>2019-01-12T21:12:45Z</updated>
 	<subtitle>Welcome!</subtitle>
 	<entry>
 		<id>https://macn1981.github.io//SimpleBlue_WyamBlogTheme/posts/Post04</id>
@@ -23,15 +23,15 @@
 &lt;h4 id="title-04"&gt;Title 04&lt;/h4&gt;
 &lt;h2 id="image-note"&gt;Image + Note&lt;/h2&gt;
 &lt;pre&gt;&lt;code class="language-MD"&gt;^^^
-![screenshot](/assets/Images/Screen01.PNG)
+![screenshot](../assets/Images/Screen01.PNG)
 ^^^ A screenshot of the blog.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;figure&gt;
-&lt;p&gt;&lt;img src="/assets/Images/Screen01.PNG" alt="screenshot" /&gt;&lt;/p&gt;
-&lt;figcaption&gt;A screenshot of the blog.&lt;/figcaption&gt;
+&lt;figure class="figure"&gt;
+&lt;p&gt;&lt;img src="../assets/Images/Screen01.PNG" class="img-fluid" alt="screenshot" /&gt;&lt;/p&gt;
+&lt;figcaption class="figure-caption"&gt;A screenshot of the blog.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;h2 id="table"&gt;Table&lt;/h2&gt;
-&lt;table&gt;
+&lt;table class="table"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: right;"&gt;Right&lt;/th&gt;
@@ -156,7 +156,7 @@ A danger alert.
 &amp;gt;
 &amp;gt; ^^ Robert Frost
 &lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
+&lt;blockquote class="blockquote"&gt;
 &lt;p&gt;Whose woods these are I think I know.&lt;/p&gt;
 &lt;p&gt;He will not see me stopping here&lt;/p&gt;
 &lt;p&gt;To watch his woods fill up with snow.&lt;/p&gt;
